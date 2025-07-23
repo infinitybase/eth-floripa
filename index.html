@@ -11,6 +11,11 @@
         href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Inter:wght@100..900&display=swap"
         rel="stylesheet">
     <style>
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 4rem;
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -214,7 +219,8 @@
             width: 100%;
             overflow: hidden;
             display: flex;
-            bottom: 0;
+            bottom: -1px;
+            max-height: 230px;
             z-index: 2;
         }
 
