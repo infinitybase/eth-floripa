@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ETH Floripa - Where Crypto Breathes Magic</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Inter:wght@100..900&display=swap"
+        rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -70,6 +73,7 @@
             align-items: center;
             justify-content: center;
             text-align: center;
+            padding-bottom: 130px;
         }
 
         .hero-video {
@@ -81,6 +85,7 @@
             height: 125%;
             object-fit: cover;
             z-index: 1;
+            clip-path: inset(1px 1px);
         }
 
         .hero-overlay {
@@ -205,16 +210,17 @@
 
         /* Arc Separator */
         .arc-separator {
-            position: relative;
+            position: absolute;
             width: 100%;
-            height: 60px;
             overflow: hidden;
+            display: flex;
+            bottom: 0;
+            z-index: 2;
         }
 
         .arc-svg {
             width: 100%;
             height: 100%;
-            object-fit: cover;
         }
 
         /* General Section Styles */
@@ -425,6 +431,14 @@
             text-align: center;
         }
 
+        .magic-island-img-container {
+            gap: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
         /* Venue Section */
         .venue-container {
             display: grid;
@@ -553,15 +567,13 @@
             text-align: center;
             min-height: 100vh;
             display: flex;
-            align-items: center;
+            align-items: flex-end;
             justify-content: center;
             overflow: hidden;
         }
 
         .footer-bg {
-            position: absolute;
-            top: 0;
-            left: 0;
+
             width: 100%;
             height: 100%;
             object-fit: cover;
@@ -569,7 +581,10 @@
         }
 
         .footer-content {
-            position: relative;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -65%);
             z-index: 2;
             background: transparent;
             padding: 80px 20px;
@@ -612,9 +627,9 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            background: rgba(255, 255, 255, 0.2);
+            background: #1515151A;
             border-radius: 16px;
-            border: 2px solid rgba(21, 21, 21, 0.15);
+            border: 2px solid #15151533;
             font-size: 24px;
             transition: all 0.3s ease;
         }
@@ -634,6 +649,7 @@
         @media (max-width: 768px) {
             .hero-section {
                 height: 100vh;
+                padding-bottom: 40px;
                 min-height: 500px;
             }
 
@@ -683,6 +699,10 @@
         }
 
         @media (max-width: 480px) {
+            .hero-section {
+                padding-bottom: 0;
+            }
+
             .hero-content {
                 padding: 0 15px;
             }
@@ -698,9 +718,24 @@
             .attendees-grid {
                 grid-template-columns: 1fr;
             }
+
+            .magic-island-img-container {
+                gap: 12px;
+            }
+
+            .venue-cta {
+                display: flex;
+                width: 100%;
+                align-items: stretch;
+            }
+
+            .venue-cta a {
+                flex: 1;
+            }
         }
     </style>
 </head>
+
 <body>
     <!-- Navigation -->
     <nav class="nav-bar">
@@ -723,7 +758,7 @@
             <div class="hero-subtitle">A two-day builder retreat between ETHLatam & Devconnect.</div>
             <div class="hero-title">11–12th November · Florianópolis, Brazil</div>
             <div class="hero-tagline">✨Where Crypto Breathes Magic✨</div>
-            
+
             <div class="countdown-container">
                 <div class="countdown-unit">
                     <span class="countdown-number" id="days">111</span>
@@ -742,33 +777,37 @@
                     <span class="countdown-label">Seconds</span>
                 </div>
             </div>
-            
+
             <a href="https://lu.ma/m5hujc9a" class="cta-button">I Want to Attend</a>
-            
+
             <div class="secondary-links">
                 <a href="https://t.me/gabriel_nvk">Sponsor the event</a>
                 <span>|</span>
                 <a href="https://t.me/+__GNtH05TAE2ZjI5">Volunteer with us</a>
             </div>
         </div>
+        <!-- Arc Separator -->
+        <div class="arc-separator">
+            <img src="brand elements/arc.svg" alt="" class="arc-svg">
+        </div>
     </section>
 
-    <!-- Arc Separator -->
-    <div class="arc-separator">
-        <img src="brand elements/arc.svg" alt="" class="arc-svg">
-    </div>
 
     <!-- Context Section -->
-    <section class="section">
+    <section class="section" style="padding-top: 0;">
         <div class="container">
             <h2 class="section-title">An Interlude Between the Noise</h2>
             <div class="section-content">
                 <div class="section-text">
-                    Skip conference hallways and crowded talks. ETH Floripa happens 1h-flight between <strong style="color: #D19DED;">ETHLatam</strong> and <strong style="color: #D19DED;">Devconnect</strong>, offering a much-needed pause to reconnect with nature, people, and meaningful work. It's the perfect intermission for builders who value intentional connection over networking chaos.
+                    Skip conference hallways and crowded talks. ETH Floripa happens 1h-flight between <strong
+                        style="color: #D19DED;">ETHLatam</strong> and <strong
+                        style="color: #D19DED;">Devconnect</strong>, offering a much-needed pause to reconnect with
+                    nature, people, and meaningful work. It's the perfect intermission for builders who value
+                    intentional connection over networking chaos.
                 </div>
-                
+
                 <div class="map-visual">
-                    <img src="brand elements/map.svg" alt="Brazil Map" class="map-svg">
+                    <img src="brand elements/map.png" alt="Brazil Map" class="map-svg">
                 </div>
             </div>
         </div>
@@ -780,7 +819,10 @@
             <h2 class="section-title">Building Touching Grass and Sand</h2>
             <div class="section-content">
                 <div class="section-text">
-                    ETHFloripa is a curated, <strong>off-the-record builder retreat designed for ~150 top global builders, founders, and researchers</strong>. Think light programming, deep interactions, and nature immersion. It's where meaningful conversations happen between yoga sessions and beachside talks.
+                    ETHFloripa is a curated, <strong>off-the-record builder retreat designed for ~150 top global
+                        builders, founders, and researchers</strong>. Think light programming, deep interactions, and
+                    nature immersion. It's where meaningful conversations happen between yoga sessions and beachside
+                    talks.
                 </div>
             </div>
         </div>
@@ -791,7 +833,7 @@
         <div class="highlights-grid">
             <div class="highlight-card">
                 <img src="brand elements/chair.svg" alt="" class="highlight-icon">
-                <div class="highlight-text">Off-the-record insights from<br/>Ethereum-native builders</div>
+                <div class="highlight-text">Off-the-record insights from<br />Ethereum-native builders</div>
             </div>
             <div class="highlight-card">
                 <img src="brand elements/coconut.svg" alt="" class="highlight-icon">
@@ -799,15 +841,15 @@
             </div>
             <div class="highlight-card">
                 <img src="brand elements/shell.svg" alt="" class="highlight-icon">
-                <div class="highlight-text">Meaningful connections with<br/>aligned people</div>
+                <div class="highlight-text">Meaningful connections with<br />aligned people</div>
             </div>
             <div class="highlight-card">
                 <img src="brand elements/volleyball.svg" alt="" class="highlight-icon">
-                <div class="highlight-text">Curated activities: volleyball,<br/>slackline, yoga</div>
+                <div class="highlight-text">Curated activities: volleyball,<br />slackline, yoga</div>
             </div>
             <div class="highlight-card">
                 <img src="brand elements/umbrella.svg" alt="" class="highlight-icon">
-                <div class="highlight-text">Perfect intermission between<br/>ETHLatam and Devconnect</div>
+                <div class="highlight-text">Perfect intermission between<br />ETHLatam and Devconnect</div>
             </div>
             <div class="highlight-card">
                 <img src="brand elements/eth.svg" alt="" class="highlight-icon">
@@ -910,16 +952,20 @@
     <section class="section">
         <div class="container">
             <div style="text-align: center; margin-bottom: 50px;">
-                <div style="display: flex; justify-content: center; align-items: center; gap: 50px; margin-bottom: 30px;">
+                <div class="magic-island-img-container">
                     <span style="font-size: 70px;">✨</span>
-                    <img src="brand elements/magical_island.png" alt="Magic Island" style="max-width: 200px; border-radius: 12px; box-shadow: 0px 8px 32px rgba(209, 157, 237, 0.40);">
+                    <img src="brand elements/magical_island.png" alt="Magic Island"
+                        style="max-width: 200px; border-radius: 12px;">
                     <span style="font-size: 70px;">✨</span>
                 </div>
             </div>
             <h2 class="section-title">Welcome to the Magic Island</h2>
             <div class="section-content">
                 <div class="section-text">
-                    Also known as <strong>The Magic Island</strong>, Florianópolis blends natural beauty with tech innovation. It's where devs code in flip-flops and surf in between meetings. The safest capital in Brazil already hosts a thriving Web3 community. And don't be surprised if you fall in love with the place. Most do.
+                    Also known as <strong>The Magic Island</strong>, Florianópolis blends natural beauty with tech
+                    innovation. It's where devs code in flip-flops and surf in between meetings. The safest capital in
+                    Brazil already hosts a thriving Web3 community. And don't be surprised if you fall in love with the
+                    place. Most do.
                 </div>
             </div>
         </div>
@@ -934,7 +980,9 @@
                     <div class="venue-label">Venue</div>
                     <div class="venue-title">Praia Mole Hotel</div>
                     <div class="venue-description">
-                        With beachfront access, tropical breakfasts, Brazilian flavors, inspiring poolside, and cozy accommodations. Guests can stay on-site and let the experience flow naturally from morning to night.
+                        With beachfront access, tropical breakfasts, Brazilian flavors, inspiring poolside, and cozy
+                        accommodations. Guests can stay on-site and let the experience flow naturally from morning to
+                        night.
                     </div>
                     <div class="venue-tags">
                         <div class="venue-tag">🌊 Beach Access</div>
@@ -942,7 +990,9 @@
                         <div class="venue-tag">🏊 Pool Chats</div>
                         <div class="venue-tag">🌴 Tropical Setting</div>
                     </div>
-                    <a href="https://lu.ma/m5hujc9a" class="cta-button">Plan Your Trip</a>
+                    <div class="venue-cta">
+                        <a href="https://lu.ma/m5hujc9a" class="cta-button">Plan Your Trip</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -951,13 +1001,15 @@
     <!-- Curation Section -->
     <section class="section">
         <div class="container">
-            <h2 class="section-title">Made With Love.<br/>For the People Who Build.</h2>
+            <h2 class="section-title">Made With Love.<br />For the People Who Build.</h2>
             <div class="section-content">
                 <div class="section-text">
-                    ETHFloripa is organized by locals who live this life every day. We're opening our city to the global Web3 community. Not for talks, but for <strong>connection</strong>. It's already home to teams like Blockful, Infinity Base, and many others. And now, for a few days, maybe you too.
+                    ETHFloripa is organized by locals who live this life every day. We're opening our city to the global
+                    Web3 community. Not for talks, but for <strong>connection</strong>. It's already home to teams like
+                    Blockful, Infinity Base, and many others. And now, for a few days, maybe you too.
                 </div>
             </div>
-            
+
             <div class="curation-container">
                 <div class="curation-card">
                     <div class="curation-title">This event IS for:</div>
@@ -1013,21 +1065,26 @@
     <footer class="footer">
         <div class="footer-content">
             <h2 class="footer-title">Let's Get Magical.</h2>
-            <h3 class="footer-subtitle">ETHFloripa is Waiting for You!</h3>
+            <!-- <h3 class="footer-subtitle">ETHFloripa is Waiting for You!</h3> -->
             <div class="footer-cta">
                 <a href="https://lu.ma/m5hujc9a" class="cta-button">I Want to Attend</a>
-                <div class="secondary-links" style="color: #151515; text-shadow: none; margin-top: 20px; font-weight: 600;">
-                    <a href="https://t.me/gabriel_nvk" style="color: #151515;">Sponsor the event</a>
+                <div class="secondary-links"
+                    style="color: #151515; text-shadow: none; margin-top: 20px; font-weight: 600;">
+                    <a href="https://t.me/gabriel_nvk" style="color: #D19DED;">Sponsor the event</a>
                     <span>|</span>
-                    <a href="https://t.me/+__GNtH05TAE2ZjI5" style="color: #151515;">Volunteer with us</a>
+                    <a href="https://t.me/+__GNtH05TAE2ZjI5" style="color: #D19DED;">Volunteer with us</a>
                 </div>
             </div>
-            
+
             <div class="social-links">
-                <a href="#" class="social-link">✕</a>
-                <a href="#" class="social-link">📷</a>
+                <a href="#" class="social-link">
+                    <img src="brand elements/x.svg" alt="x" width="24" height="24">
+                </a>
+                <a href="#" class="social-link">
+                    <img src="brand elements/instagram.svg" alt="Instagram" width="24" height="24">
+                </a>
             </div>
-            
+
             <div class="footer-text">
                 Organized with ❤️ by Blockful, Infinity Base & Florianópolis Web3 Community
             </div>
@@ -1036,33 +1093,34 @@
     </footer>
 
     <script>
-    // Countdown Timer
-    function updateCountdown() {
-        const eventDate = new Date('2025-11-11T00:00:00-03:00').getTime();
-        const now = new Date().getTime();
-        const distance = eventDate - now;
+        // Countdown Timer
+        function updateCountdown() {
+            const eventDate = new Date('2025-11-11T00:00:00-03:00').getTime();
+            const now = new Date().getTime();
+            const distance = eventDate - now;
 
-        if (distance > 0) {
-            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            if (distance > 0) {
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-            document.getElementById('days').textContent = days.toString().padStart(2, '0');
-            document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
-            document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
-            document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
-        } else {
-            document.getElementById('days').textContent = '00';
-            document.getElementById('hours').textContent = '00';
-            document.getElementById('minutes').textContent = '00';
-            document.getElementById('seconds').textContent = '00';
+                document.getElementById('days').textContent = days.toString().padStart(2, '0');
+                document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+                document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+                document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+            } else {
+                document.getElementById('days').textContent = '00';
+                document.getElementById('hours').textContent = '00';
+                document.getElementById('minutes').textContent = '00';
+                document.getElementById('seconds').textContent = '00';
+            }
         }
-    }
 
-    // Update countdown every second
-    setInterval(updateCountdown, 1000);
-    updateCountdown();
+        // Update countdown every second
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
     </script>
 </body>
+
 </html>
