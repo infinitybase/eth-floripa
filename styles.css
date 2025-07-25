@@ -746,10 +746,7 @@ body {
 		display: flex;
 		width: 100%;
 		align-items: stretch;
-	}
-
-	.venue-cta a {
-		flex: 1;
+		justify-content: center;
 	}
 
 	.footer .footer-text {
