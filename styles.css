@@ -88,6 +88,13 @@ body {
 	padding-top: 120px; /* (60px) -> for fixed nav */
 }
 
+.hero-section .container {
+	height: calc(100% - 408px);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
 .hero-content {
 	display: flex;
 	justify-content: space-between;
