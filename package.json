@@ -17,6 +17,7 @@
   "packageManager": "pnpm@9.4.0",
   "dependencies": {
     "@tailwindcss/postcss": "^4.1.12",
+    "babel-plugin-react-compiler": "19.1.0-rc.2",
     "clsx": "^2.1.1",
     "embla-carousel": "^8.6.0",
     "embla-carousel-autoplay": "^8.6.0",
