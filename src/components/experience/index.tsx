@@ -50,7 +50,7 @@ const Experience = () => {
               className="flex flex-col justify-between rounded-2xl transition-all hover:shadow-xl/20"
             >
               {i < 3 && (
-                <p className="p-2 text-center font-normal text-base text-secondary tracking-[4%] lg:text-xl">
+                <p className="hidden p-2 text-center font-normal text-base text-secondary tracking-[4%] lg:block lg:text-xl">
                   {experience.label}
                 </p>
               )}
@@ -64,6 +64,11 @@ const Experience = () => {
                   height={300}
                 />
               </div>
+              {i < 3 && (
+                <p className="block p-2 text-center font-normal text-base text-secondary tracking-[4%] lg:hidden lg:text-xl">
+                  {experience.label}
+                </p>
+              )}
               {i >= 3 && (
                 <p className="p-2 text-center font-normal text-base text-secondary tracking-[4%] lg:text-xl">
                   {experience.label}
