@@ -31,6 +31,7 @@
   .container {
     @apply px-4 mx-auto w-full;
     @media (width >= 96rem /* 1536px */) {
+      /* biome-ignore lint/complexity/noImportantStyles: overwrites default */
       max-width: 80rem !important /* 1280px */;
     }
   }

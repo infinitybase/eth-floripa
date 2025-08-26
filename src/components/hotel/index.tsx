@@ -17,7 +17,7 @@ const Hotel = () => {
       id="venue"
       className="container flex flex-col gap-6 py-10 lg:flex-row lg:gap-12 lg:py-20"
     >
-      <div className="w-full lg:w-1/2 h-full relative lg:aspect-[4/3] aspect-video">
+      <div className="relative aspect-video h-full w-full lg:aspect-[4/3] lg:w-1/2">
         <Image
           src={HotelImage}
           alt="Hotel with pool"
@@ -26,7 +26,7 @@ const Hotel = () => {
           sizes="(max-width: 768px) 100vw"
         />
       </div>
-      <div className="flex flex-col gap-3 lg:gap-6 lg:w-1/2">
+      <div className="flex flex-col gap-3 lg:w-1/2 lg:gap-6">
         <p className="text-center font-semibold text-base text-tertiary lg:text-left lg:text-xl">
           Venue
         </p>

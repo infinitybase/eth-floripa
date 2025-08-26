@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   title: 'ETH Floripa November 11 - 12 in Florianópolis, Brazil',
   description:
     'ETH Floripa is a curated, off-the-record, retreat between ETH LATAM and Devconnect designed for ~150 top global builders, founders, and researchers November 11-12, 2025 in Florianópolis, Brazil.',
-  robots: "index, follow",
+  robots: 'index, follow',
   icons: [
     {
       url: '/favicon.ico',
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
       rel: 'icon',
     },
   ],
-  manifest: "/site.webmanifest",
+  manifest: '/site.webmanifest',
   openGraph: {
     title: 'ETH Floripa November 11 - 12 in Florianópolis, Brazil',
     description:
@@ -73,10 +73,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="pt-br">
+    <html lang="br">
       <head>
         {/* Google Fonts */}
-         <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
       </head>
       <body className={`${interSans.variable} ${bricolage.variable}`}>
         <Header />
