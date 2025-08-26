@@ -17,6 +17,7 @@ const bricolage = Bricolage_Grotesque({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://www.ethfloripa.com/'),
   title: 'ETH Floripa November 11 - 12 in Florianópolis, Brazil',
   description:
     'ETH Floripa is a curated, off-the-record, retreat between ETH LATAM and Devconnect designed for ~150 top global builders, founders, and researchers November 11-12, 2025 in Florianópolis, Brazil.',
