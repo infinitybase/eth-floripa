@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "dev": "next dev --turbopack",
-    "build": "biome check && next build",
+    "build": "next build",
     "start": "next start",
     "lint": "biome check --no-errors-on-unmatched --reporter=summary ."
   },
