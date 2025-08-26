@@ -9,8 +9,8 @@ import SocialLinks from '../social-links';
 
 const Hero = () => {
   return (
-    <section className="relative flex min-h-screen flex-1 pt-14">
-      <div className="-translate-x-1/2 -translate-y-1/2 absolute top-2/5 left-1/2 z-10 w-full">
+    <section className="relative flex min-h-[100dvh] flex-1 pt-14">
+      <div className="-translate-x-1/2 -translate-y-1/2 absolute top-1/2 left-1/2 z-10 w-full lg:top-2/5">
         <div className="container mx-auto flex w-full flex-col-reverse items-center justify-center gap-16 px-5 lg:flex-row lg:justify-between lg:gap-32">
           <div className="flex max-w-lg flex-col items-center gap-6 lg:items-start">
             <h1 className="hero-text-overlay text-center font-bold font-bricolage text-3xl text-primary leading-none lg:text-left lg:text-5xl">
@@ -83,13 +83,14 @@ const Hero = () => {
             alt="ETH Floripa Hero Image - Florianópolis Beach Scene"
             quality={90}
             height={117}
+            className="w-full"
             width={430}
             priority
             sizes="100vw"
           />
         </div>
 
-        <div className="-translate-x-1/2 absolute bottom-4 left-1/2 z-10 flex w-full max-w-4xl flex-col-reverse items-center justify-center gap-6 text-center lg:bottom-5 lg:flex-col">
+        <div className="-translate-x-1/2 absolute bottom-4 left-1/2 z-10 hidden w-full max-w-4xl flex-col-reverse items-center justify-center gap-2 text-center sm:flex lg:bottom-5 lg:flex-col lg:gap-6">
           <SocialLinks />
           <p className="text-center font-bricolage font-normal text-secondary text-xs tracking-[2.3px] lg:text-base">
             Organized with ❤️ by Blockful, InfinityBase & Florianópolis Web3
