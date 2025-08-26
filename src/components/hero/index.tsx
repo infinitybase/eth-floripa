@@ -58,7 +58,6 @@ const Hero = () => {
               priority
               width={500}
               sizes="100vw"
-              className="hero-logo"
             />
             <div className="hero-text-overlay text-center font-bricolage font-medium text-lg text-secondary leading-normal tracking-[2.5px] lg:text-2xl">
               Where Crypto Breathes Magic
@@ -82,10 +81,9 @@ const Hero = () => {
           <Image
             src={HeroMobileFooter}
             alt="ETH Floripa Hero Image - Florianópolis Beach Scene"
-            className="w-full"
             quality={90}
-            height={116}
-            width={300}
+            height={117}
+            width={430}
             priority
             sizes="100vw"
           />
