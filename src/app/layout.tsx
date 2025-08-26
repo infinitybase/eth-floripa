@@ -55,6 +55,14 @@ export const metadata: Metadata = {
     siteName: 'ETH Floripa',
     url: 'https://www.ethfloripa.com/',
     countryName: 'Brazil',
+    images: [
+      {
+        url: '/eth-floripa-og.png',
+        width: 1200,
+        height: 630,
+        alt: 'ETH Floripa',
+      },
+    ],
   },
 };
 
