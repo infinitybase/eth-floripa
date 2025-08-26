@@ -36,7 +36,7 @@ const Hotel = () => {
         <p className="text-center text-base text-secondary lg:text-left lg:text-2xl">
           With beachfront access, tropical breakfasts, Brazilian flavors,
           inspiring poolside, and cozy accommodations. Guests can stay on-site
-          an let the experience flows naturally from morning to night.
+          and let the experience flows naturally from morning to night.
         </p>
 
         <div className="flex flex-wrap items-center justify-center gap-3 lg:justify-start lg:gap-4">
