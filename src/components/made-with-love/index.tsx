@@ -40,7 +40,7 @@ const MadeWithLove = () => {
           alt="Island"
           width={990}
           height={236}
-          sizes="(max-width:768) 100vw"
+          sizes="(max-width: 768px) 100vw"
         />
 
         <div className="flex w-full max-w-4xl flex-col justify-between gap-6 lg:flex-row">
