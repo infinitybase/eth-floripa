@@ -1,0 +1,59 @@
+/** biome-ignore-all lint/suspicious/noUnknownAtRules: is tailwind sintax */
+@import "tailwindcss";
+@import "tw-animate-css";
+
+:root {
+  --header-height: 53px;
+}
+
+@theme inline {
+  --font-inter: var(--inter);
+  --font-bricolage: var(--bricolage);
+
+  --color-background: #141114;
+  --color-background-secondary: #7d5594;
+  --color-foreground: #ffffff;
+
+  --color-primary: #d19ded;
+  --color-primary-contrast: #181818;
+
+  --color-secondary: #f4f3ed;
+
+  --color-tertiary: #c9f678;
+  --color-tertiary-contrast: #7d5594;
+}
+
+@layer components {
+  .hero-text-overlay {
+    @apply bg-background rounded-[100px] py-2 px-4;
+  }
+
+  .container {
+    @apply px-4 mx-auto w-full;
+    @media (width >= 96rem /* 1536px */) {
+      max-width: 80rem !important /* 1280px */;
+    }
+  }
+
+  .btn-primary {
+    @apply rounded-[100px] border-tertiary-contrast border-b-[3px] bg-tertiary px-8 py-4 font-bricolage font-extrabold text-tertiary-contrast uppercase leading-normal tracking-[4%] transition-all duration-300 hover:bg-tertiary-contrast hover:text-tertiary hover:border-tertiary;
+  }
+}
+
+@layer base {
+  html {
+    @apply scroll-smooth scroll-pt-16;
+  }
+
+  * {
+    @apply m-0 p-0 box-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-inter;
+  }
+
+  main {
+    @apply flex flex-col flex-1;
+  }
+}
