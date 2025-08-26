@@ -13,15 +13,15 @@ const Hero = () => {
       <div className="-translate-x-1/2 -translate-y-1/2 absolute top-2/5 left-1/2 z-10 w-full">
         <div className="container mx-auto flex w-full flex-col-reverse items-center justify-center gap-16 px-5 lg:flex-row lg:justify-between lg:gap-32">
           <div className="flex max-w-lg flex-col items-center gap-6 lg:items-start">
-            <h1 className="text-center font-bold font-bricolage text-3xl text-primary leading-none lg:text-left lg:text-5xl hero-text-overlay">
+            <h1 className="hero-text-overlay text-center font-bold font-bricolage text-3xl text-primary leading-none lg:text-left lg:text-5xl">
               11-12th November <br />
               Florianópolis, Brazil
             </h1>
-            <h2 className="text-center font-bricolage font-medium text-lg text-secondary leading-normal lg:text-left lg:text-xl hero-text-overlay">
+            <h2 className="hero-text-overlay text-center font-bricolage font-medium text-lg text-secondary leading-normal lg:text-left lg:text-xl">
               A two-day builder retreat between <br /> ETHLatam & Devconnect.
             </h2>
 
-            <div className="lg:mt-14 mx-4">
+            <div className="mx-4 lg:mt-14">
               <Link
                 href="https://lu.ma/m5hujc9a"
                 className="btn-primary"
@@ -67,15 +67,15 @@ const Hero = () => {
       </div>
 
       {/* HERO FOOTER */}
-      <div className="absolute bottom-0 left-0 flex min-h-[430px] lg:max-h-[50vh] h-full w-full flex-col justify-center">
-          <Image
-            src={HeroFooter}
-            alt="ETH Floripa Hero Image - Florianópolis Beach Scene"
-            className="hidden lg:block mt-auto object-cover"
-            fill
-            priority
-            sizes="100vw"
-          />
+      <div className="absolute bottom-0 left-0 flex h-full min-h-[430px] w-full flex-col justify-center lg:max-h-[50vh]">
+        <Image
+          src={HeroFooter}
+          alt="ETH Floripa Hero Image - Florianópolis Beach Scene"
+          className="mt-auto hidden object-cover lg:block"
+          fill
+          priority
+          sizes="100vw"
+        />
 
         <div className="absolute bottom-0 block w-full lg:hidden">
           <Image
