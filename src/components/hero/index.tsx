@@ -1,8 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
-import HeroFooter from '@/assets/images/hero.png';
-import HeroMobileFooter from '@/assets/images/hero-mobile.png';
+import HeroFooter from '@/assets/images/hero.webp';
 import Logo from '@/assets/images/logo-black.png';
 
 import SocialLinks from '../social-links';
@@ -67,28 +66,16 @@ const Hero = () => {
       </div>
 
       {/* HERO FOOTER */}
-      <div className="absolute bottom-0 left-0 flex h-full min-h-[430px] w-full flex-col justify-center lg:max-h-[50vh]">
+      <div className="relative mt-auto flex aspect-[15/4] min-h-[116px] w-full">
+        <div className="absolute bottom-0 z-10 aspect-[15/4] w-full bg-[linear-gradient(180deg,rgba(0,0,0,0)_65.38%,rgba(0,0,0,0.4)_100%)]" />
         <Image
           src={HeroFooter}
-          alt="ETH Floripa Hero Image - Florianópolis Beach Scene"
-          className="mt-auto hidden object-cover lg:block"
+          alt="Florianópolis Beach Drawing"
+          className="bottom-0 mt-auto object-cover"
           fill
           priority
           sizes="100vw"
         />
-
-        <div className="absolute bottom-0 block w-full lg:hidden">
-          <Image
-            src={HeroMobileFooter}
-            alt="ETH Floripa Hero Image - Florianópolis Beach Scene"
-            quality={90}
-            height={117}
-            className="w-full"
-            width={430}
-            priority
-            sizes="100vw"
-          />
-        </div>
 
         <div className="-translate-x-1/2 absolute bottom-4 left-1/2 z-10 hidden w-full max-w-4xl flex-col-reverse items-center justify-center gap-2 text-center sm:flex lg:bottom-5 lg:flex-col lg:gap-6">
           <SocialLinks />
