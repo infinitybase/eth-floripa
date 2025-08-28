@@ -67,11 +67,11 @@ const Hero = () => {
       </div>
 
       {/* HERO FOOTER */}
-      <div className="absolute bottom-0 left-0 flex h-full min-h-[430px] w-full flex-col justify-center lg:max-h-[50vh]">
+      <div className="relative mt-auto flex aspect-[15/4] min-h-[430px] w-full lg:min-h-0">
         <Image
           src={HeroFooter}
-          alt="ETH Floripa Hero Image - Florianópolis Beach Scene"
-          className="mt-auto hidden object-cover lg:block"
+          alt="Florianópolis Beach Drawing"
+          className="mt-auto hidden lg:block"
           fill
           priority
           sizes="100vw"
@@ -80,7 +80,7 @@ const Hero = () => {
         <div className="absolute bottom-0 block w-full lg:hidden">
           <Image
             src={HeroMobileFooter}
-            alt="ETH Floripa Hero Image - Florianópolis Beach Scene"
+            alt="Florianópolis Beach Drawing"
             quality={90}
             height={117}
             className="w-full"
