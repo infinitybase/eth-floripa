@@ -67,6 +67,7 @@ const Hero = () => {
 
       {/* HERO FOOTER */}
       <div className="relative mt-auto flex aspect-[15/4] min-h-[116px] w-full">
+        <div className="absolute bottom-0 z-10 aspect-[15/4] w-full bg-[linear-gradient(180deg,rgba(0,0,0,0)_65.38%,rgba(0,0,0,0.4)_100%)]" />
         <Image
           src={HeroFooter}
           alt="Florianópolis Beach Drawing"
