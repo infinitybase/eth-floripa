@@ -1,8 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
-import HeroFooter from '@/assets/images/hero.png';
-import HeroMobileFooter from '@/assets/images/hero-mobile.png';
+import HeroFooter from '@/assets/images/hero.webp';
 import Logo from '@/assets/images/logo-black.png';
 
 import SocialLinks from '../social-links';
@@ -67,28 +66,15 @@ const Hero = () => {
       </div>
 
       {/* HERO FOOTER */}
-      <div className="relative mt-auto flex aspect-[15/4] min-h-[430px] w-full lg:min-h-0">
+      <div className="relative mt-auto flex aspect-[15/4] min-h-[116px] w-full">
         <Image
           src={HeroFooter}
           alt="Florianópolis Beach Drawing"
-          className="mt-auto hidden lg:block"
+          className="bottom-0 mt-auto object-cover"
           fill
           priority
           sizes="100vw"
         />
-
-        <div className="absolute bottom-0 block w-full lg:hidden">
-          <Image
-            src={HeroMobileFooter}
-            alt="Florianópolis Beach Drawing"
-            quality={90}
-            height={117}
-            className="w-full"
-            width={430}
-            priority
-            sizes="100vw"
-          />
-        </div>
 
         <div className="-translate-x-1/2 absolute bottom-4 left-1/2 z-10 hidden w-full max-w-4xl flex-col-reverse items-center justify-center gap-2 text-center sm:flex lg:bottom-5 lg:flex-col lg:gap-6">
           <SocialLinks />
