@@ -9,7 +9,7 @@ import SocialLinks from '../social-links';
 const Hero = () => {
   return (
     <section className="relative flex min-h-[100dvh] flex-1 pt-14">
-      <div className="-translate-x-1/2 -translate-y-1/2 absolute top-1/2 left-1/2 z-10 w-full lg:top-2/5">
+      <div className="-translate-x-1/2 -translate-y-1/2 absolute top-1/2 left-1/2 z-20 w-full lg:top-2/5">
         <div className="container mx-auto flex w-full flex-col-reverse items-center justify-center gap-16 px-5 lg:flex-row lg:justify-between lg:gap-32">
           <div className="flex max-w-lg flex-col items-center gap-6 lg:items-start">
             <h1 className="hero-text-overlay text-center font-bold font-bricolage text-3xl text-primary leading-none lg:text-left lg:text-5xl">
