@@ -100,7 +100,6 @@ const TabsList = ({
       const containerRect = container.getBoundingClientRect();
       const tabRect = tabElement.getBoundingClientRect();
 
-      // Calcula as posições relativas ao container
       const tabLeft = tabRect.left - containerRect.left + container.scrollLeft;
       const tabRight = tabLeft + tabRect.width;
       const containerWidth = container.clientWidth;
@@ -108,16 +107,12 @@ const TabsList = ({
 
       let newScrollPosition = currentScrollLeft;
 
-      // Se a tab está cortada à esquerda
       if (tabLeft < currentScrollLeft) {
-        newScrollPosition = tabLeft - 8; // 8px de margem
-      }
-      // Se a tab está cortada à direita
-      else if (tabRight > currentScrollLeft + containerWidth) {
-        newScrollPosition = tabRight - containerWidth + 8; // 8px de margem
+        newScrollPosition = tabLeft - 8;
+      } else if (tabRight > currentScrollLeft + containerWidth) {
+        newScrollPosition = tabRight - containerWidth + 8;
       }
 
-      // Só rola se precisar
       if (newScrollPosition !== currentScrollLeft) {
         container.scrollTo({
           left: Math.max(0, newScrollPosition),
@@ -140,13 +135,11 @@ const TabsList = ({
       });
       resizeObserver.observe(container);
 
-      // Adiciona listener para cliques nas tabs
       const handleTabClick = (event: Event) => {
         const target = event.target as HTMLElement;
         const tabTrigger = target.closest('[role="tab"]') as HTMLElement;
 
         if (tabTrigger) {
-          // Pequeno delay para permitir que o estado da tab seja atualizado primeiro
           setTimeout(() => {
             scrollToShowTab(tabTrigger);
             updateActiveTabPosition();
@@ -156,7 +149,6 @@ const TabsList = ({
 
       container.addEventListener('click', handleTabClick);
 
-      // Observer para mudanças no DOM (quando tab ativa muda)
       const mutationObserver = new MutationObserver(() => {
         updateActiveTabPosition();
       });
@@ -188,12 +180,11 @@ const TabsList = ({
         const containerWidth = container.clientWidth;
         const currentScrollLeft = container.scrollLeft;
 
-        // Encontra a primeira tab completamente visível atual
         let firstVisibleIndex = 0;
         let accumulatedWidth = 0;
 
         for (let i = 0; i < tabs.length; i++) {
-          const tabWidth = tabs[i].offsetWidth + 8; // 8px é o gap
+          const tabWidth = tabs[i].offsetWidth + 8;
           if (accumulatedWidth + tabWidth > currentScrollLeft) {
             firstVisibleIndex = i;
             break;
@@ -201,7 +192,6 @@ const TabsList = ({
           accumulatedWidth += tabWidth;
         }
 
-        // Calcula quantas tabs cabem completamente na tela
         let visibleTabsCount = 0;
         let totalWidth = 0;
 
@@ -215,7 +205,6 @@ const TabsList = ({
           }
         }
 
-        // Volta uma "página" de tabs
         const startIndex = Math.max(0, firstVisibleIndex - visibleTabsCount);
         let scrollToPosition = 0;
 
@@ -241,12 +230,11 @@ const TabsList = ({
         const containerWidth = container.clientWidth;
         const currentScrollLeft = container.scrollLeft;
 
-        // Encontra a primeira tab completamente visível atual
         let firstVisibleIndex = 0;
         let accumulatedWidth = 0;
 
         for (let i = 0; i < tabs.length; i++) {
-          const tabWidth = tabs[i].offsetWidth + 8; // 8px é o gap
+          const tabWidth = tabs[i].offsetWidth + 8;
           if (accumulatedWidth + tabWidth > currentScrollLeft) {
             firstVisibleIndex = i;
             break;
@@ -254,7 +242,6 @@ const TabsList = ({
           accumulatedWidth += tabWidth;
         }
 
-        // Calcula quantas tabs cabem completamente na tela
         let visibleTabsCount = 0;
         let totalWidth = 0;
 
@@ -268,7 +255,6 @@ const TabsList = ({
           }
         }
 
-        // Avança uma "página" de tabs
         const startIndex = Math.min(
           tabs.length - 1,
           firstVisibleIndex + visibleTabsCount,
