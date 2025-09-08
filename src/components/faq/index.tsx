@@ -27,7 +27,7 @@ const faq: Faq[] = [
         answer: (
           <ul className="list-disc">
             <li>
-              <strong>Dates:</strong> November 11-12, 2024
+              <strong>Dates:</strong> November 11-12, 2025
             </li>
             <li>
               <strong>Location:</strong> Florianópolis, Brazil
