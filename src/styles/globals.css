@@ -41,6 +41,29 @@
   }
 }
 
+@keyframes slideDown {
+  from {
+    height: 0;
+  }
+  to {
+    height: var(--radix-accordion-content-height);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    height: var(--radix-accordion-content-height);
+  }
+  to {
+    height: 0;
+  }
+}
+
+@theme {
+  --animate-slideDown: slideDown 500ms cubic-bezier(0.87, 0, 0.13, 1);
+  --animate-slideUp: slideUp 500ms cubic-bezier(0.87, 0, 0.13, 1);
+}
+
 @layer base {
   html {
     @apply scroll-smooth scroll-pt-16;
@@ -56,5 +79,10 @@
 
   main {
     @apply flex flex-col flex-1;
+  }
+
+  .hidden-scrollbar {
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* Internet Explorer 10+ */
   }
 }
