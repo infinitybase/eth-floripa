@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { ATTEND_LINK, SPONSOR_LINK, VOLUNTEER_LINK } from '@/lib/constants';
 import SocialLinks from '../social-links';
 
 const Footer = () => {
@@ -10,7 +11,7 @@ const Footer = () => {
 
       <div id="sponsors" className="flex flex-col gap-4">
         <Link
-          href="https://lu.ma/m5hujc9a"
+          href={ATTEND_LINK}
           className="btn-primary w-full text-center"
           target="_blank"
           rel="noopener noreferrer"
@@ -19,19 +20,11 @@ const Footer = () => {
         </Link>
 
         <div className="flex w-fit items-center gap-3 font-medium text-primary text-xs lg:gap-6">
-          <Link
-            href="https://t.me/gabriel_nvk"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <Link href={SPONSOR_LINK} target="_blank" rel="noopener noreferrer">
             Sponsor the event
           </Link>
           <span>|</span>
-          <Link
-            href="https://t.me/fraan_ckabral"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <Link href={VOLUNTEER_LINK} target="_blank" rel="noopener noreferrer">
             Volunteer with us
           </Link>
         </div>
