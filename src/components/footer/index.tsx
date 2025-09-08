@@ -28,7 +28,7 @@ const Footer = () => {
           </Link>
           <span>|</span>
           <Link
-            href="https://t.me/+__GNtH05TAE2ZjI5"
+            href="https://t.me/fraan_ckabral"
             target="_blank"
             rel="noopener noreferrer"
           >
