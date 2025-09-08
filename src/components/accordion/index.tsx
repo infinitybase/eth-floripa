@@ -34,7 +34,7 @@ const RadixAccordionTrigger = ({
     <RadixAccordion.Trigger
       className={cn(
         'group flex h-[45px] flex-1 cursor-default items-center justify-between bg-mauve1 text-base text-foreground leading-none shadow-[0_1px_0]',
-        'lg-text-lg lg:px-5',
+        'lg:px-5 lg:text-lg',
         'hover:underline',
         className,
       )}
