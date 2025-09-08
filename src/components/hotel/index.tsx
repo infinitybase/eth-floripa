@@ -55,7 +55,7 @@ const Hotel = () => {
         </div>
 
         <Link
-          href="https://lu.ma/m5hujc9a"
+          href="https://blockful.notion.site/Arriving-in-Floripa-ETH-Floripa-2025-257bdff33ba780c5be77f1371bc2e1b6"
           className="btn-primary w-full text-center lg:w-fit"
           target="_blank"
           rel="noopener noreferrer"
