@@ -258,6 +258,10 @@ const faq: Faq[] = [
   },
 ];
 
+const faqWithoutCategory = faq.flatMap((category) =>
+  category.items.map((item) => item),
+);
+
 const Faq = () => {
   return (
     <section id="faq" className="container mx-auto">
@@ -268,31 +272,16 @@ const Faq = () => {
         className="mx-auto flex w-full flex-col md:w-[600px] lg:w-[800px] xl:w-[900px]"
         defaultValue={faq[0].category}
       >
-        <Tabs.List className="">
-          {faq.map((category) => (
-            <Tabs.Trigger key={category.category} value={category.category}>
-              {category.category}
-            </Tabs.Trigger>
+        <Accordion.Root type="single" collapsible>
+          {faqWithoutCategory.map((faq) => (
+            <Accordion.Item key={faq.question} value={faq.question}>
+              <Accordion.Trigger>{faq.question}</Accordion.Trigger>
+              <Accordion.Content className="text-secondary text-sm lg:text-base">
+                {faq.answer}
+              </Accordion.Content>
+            </Accordion.Item>
           ))}
-        </Tabs.List>
-        {faq.map((faqCategory) => (
-          <Tabs.Content
-            key={faqCategory.category}
-            value={faqCategory.category}
-            className="mt-10"
-          >
-            <Accordion.Root type="single" collapsible>
-              {faqCategory.items.map((item) => (
-                <Accordion.Item key={item.question} value={item.question}>
-                  <Accordion.Trigger>{item.question}</Accordion.Trigger>
-                  <Accordion.Content className="text-secondary text-sm lg:text-base">
-                    {item.answer}
-                  </Accordion.Content>
-                </Accordion.Item>
-              ))}
-            </Accordion.Root>
-          </Tabs.Content>
-        ))}
+        </Accordion.Root>
       </Tabs.Root>
     </section>
   );
