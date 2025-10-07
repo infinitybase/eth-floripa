@@ -7,10 +7,11 @@ import Image from 'next/image';
 import Floripa1 from '@/assets/images/floripa-1.png';
 import Floripa2 from '@/assets/images/floripa-2.png';
 import Floripa3 from '@/assets/images/floripa-3.png';
-import Floripa4 from '@/assets/images/floripa-4.png';
+import Floripa4 from '@/assets/images/floripa-4.webp';
+import Floripa5 from '@/assets/images/floripa-5.webp';
 import DotsButton from './components/dots-button';
 
-const slides = [Floripa1, Floripa2, Floripa3, Floripa4];
+const slides = [Floripa1, Floripa2, Floripa3, Floripa4, Floripa5];
 
 const FloripaCarousel = () => {
   const [emblaRef, api] = useEmblaCarousel({ loop: true }, [
