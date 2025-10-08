@@ -1,5 +1,6 @@
 import Agenda from '@/components/agenda';
 import Experience from '@/components/experience';
+import Faq from '@/components/faq';
 import FloripaCarousel from '@/components/floripa-carousel';
 import Hero from '@/components/hero';
 import Hotel from '@/components/hotel';
@@ -19,6 +20,7 @@ export default function Page() {
       <FloripaCarousel />
       <Hotel />
       <MadeWithLove />
+      <Faq />
       <script
         type="application/ld+json"
         // biome-ignore lint/security/noDangerouslySetInnerHtml: ld+json

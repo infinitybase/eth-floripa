@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 import HeroFooter from '@/assets/images/hero.webp';
 import Logo from '@/assets/images/logo-black.png';
-
+import { ATTEND_LINK, SPONSOR_LINK, VOLUNTEER_LINK } from '@/lib/constants';
 import SocialLinks from '../social-links';
 
 const Hero = () => {
@@ -22,7 +22,7 @@ const Hero = () => {
 
             <div className="mx-4 lg:mt-14">
               <Link
-                href="https://lu.ma/m5hujc9a"
+                href={ATTEND_LINK}
                 className="btn-primary"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -33,7 +33,7 @@ const Hero = () => {
 
             <div className="hero-text-overlay mt-1 flex w-fit items-center gap-3 font-medium text-foreground/90 text-shadow-black text-xs lg:gap-6">
               <Link
-                href="https://t.me/gabriel_nvk"
+                href={SPONSOR_LINK}
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -41,7 +41,7 @@ const Hero = () => {
               </Link>
               <span>|</span>
               <Link
-                href="https://t.me/+__GNtH05TAE2ZjI5"
+                href={VOLUNTEER_LINK}
                 target="_blank"
                 rel="noopener noreferrer"
               >
