@@ -18,7 +18,7 @@ const MapSection = () => {
           connection over networking chaos.
         </p>
 
-        <div className="lg:-mt-5 xl:-mt-10 mx-auto flex w-full items-center justify-center lg:max-w-[977px]">
+        <div className="mx-auto flex w-full items-center justify-center lg:max-w-[977px]">
           <Image
             src={MapImage}
             alt="Map"
