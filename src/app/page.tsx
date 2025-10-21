@@ -7,6 +7,7 @@ import Hotel from '@/components/hotel';
 import MadeWithLove from '@/components/made-with-love';
 import MagicIsland from '@/components/magic-island';
 import MapSection from '@/components/map';
+import Sponsors from '@/components/sponsors';
 import { eventSchema } from '@/lib/event-schema';
 
 export default function Page() {
@@ -20,6 +21,7 @@ export default function Page() {
       <FloripaCarousel />
       <Hotel />
       <MadeWithLove />
+      <Sponsors />
       <Faq />
       <script
         type="application/ld+json"
