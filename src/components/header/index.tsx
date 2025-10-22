@@ -3,8 +3,9 @@ import Link from 'next/link';
 const navItems = [
   { label: 'Schedule', href: '#schedule' },
   { label: 'Venue', href: '#venue' },
-  { label: 'Faq', href: '#faq' },
+  { label: 'Speakers', href: '#speakers' },
   { label: 'Sponsors', href: '#sponsors' },
+  { label: 'Faq', href: '#faq' },
 ];
 
 const Header = () => {

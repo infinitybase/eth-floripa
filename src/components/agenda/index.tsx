@@ -14,10 +14,9 @@ const day1 = {
   title: 'Day 1',
   subtitle: 'Focus & Co-creation',
   list: [
-    'Morning talks and workshops',
-    'Build sessions and topic pods',
-    'Deep dives into emerging protocols',
-    'Sunset BBQ by the ocean',
+    'Opening session & ecosystem alignment',
+    'Deep dives and topic pods by the pool',
+    'Sunset on the beach, BBQ & DJ by the pool',
   ],
 };
 
@@ -25,10 +24,9 @@ const day2 = {
   title: 'Day 2',
   subtitle: 'Integration & Celebration',
   list: [
-    'Morning rest or coworking',
-    'Spontaneous afternoon sessions',
-    'Community-driven discussions',
-    'Closing party on the Magic Island',
+    'Chill time, beach sports & co-working',
+    'Community-driven sessions & fireside chats',
+    'Closing beach party on the Magic Island',
   ],
 };
 
