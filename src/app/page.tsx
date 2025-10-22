@@ -7,6 +7,7 @@ import Hotel from '@/components/hotel';
 import MadeWithLove from '@/components/made-with-love';
 import MagicIsland from '@/components/magic-island';
 import MapSection from '@/components/map';
+import Speakers from '@/components/speakers';
 import Sponsors from '@/components/sponsors';
 import { eventSchema } from '@/lib/event-schema';
 
@@ -17,6 +18,7 @@ export default function Page() {
       <MapSection />
       <Experience />
       <Agenda />
+      <Speakers />
       <MagicIsland />
       <FloripaCarousel />
       <Hotel />
