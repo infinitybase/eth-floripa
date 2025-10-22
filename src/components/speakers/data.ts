@@ -46,7 +46,7 @@ export const speakers: Speaker[] = [
     social: {
       x: 'https://x.com/alextnetto',
       instagram: 'https://www.instagram.com/alextnetto',
-      linkedin: 'https://www.linkedin.com/in/daniela-zschaber',
+      linkedin: 'https://www.linkedin.com/in/alextnetto/',
     },
   },
   {

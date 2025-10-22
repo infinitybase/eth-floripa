@@ -2,15 +2,22 @@ import Image from 'next/image';
 import InstagramIcon from '@/assets/svg/instagram.svg';
 import LinkedInIcon from '@/assets/svg/linkedin.svg';
 import XIcon from '@/assets/svg/x.svg';
+import { cn } from '@/lib/utils';
 import { type Speaker, speakers } from './data';
 
 interface SocialLinkProps {
   href: string;
   icon: React.ComponentType<React.SVGProps<SVGSVGElement>>;
   label: string;
+  className?: string;
 }
 
-const SocialLink = ({ href, icon: Icon, label }: SocialLinkProps) => (
+const SocialLink = ({
+  href,
+  label,
+  className,
+  icon: Icon,
+}: SocialLinkProps) => (
   <a
     href={href}
     target="_blank"
@@ -18,7 +25,7 @@ const SocialLink = ({ href, icon: Icon, label }: SocialLinkProps) => (
     aria-label={label}
     className="transition-opacity hover:opacity-70"
   >
-    <Icon className="h-6 w-6 text-secondary" />
+    <Icon className={cn('h-6 w-6 text-primary', className)} />
   </a>
 );
 
@@ -45,12 +52,12 @@ const SpeakerCard = ({ speaker }: SpeakerCardProps) => (
     </div>
 
     {/* Speaker Name */}
-    <h3 className="font-bold font-bricolage text-2xl text-secondary">
+    <h3 className="font-bold font-bricolage text-2xl text-primary">
       {speaker.name}
     </h3>
 
     {/* Social Links */}
-    <div className="flex items-center gap-[15.32px]">
+    <div className="flex items-baseline gap-[15.32px]">
       {speaker.social.instagram && (
         <SocialLink
           href={speaker.social.instagram}
@@ -63,6 +70,7 @@ const SpeakerCard = ({ speaker }: SpeakerCardProps) => (
           href={speaker.social.x}
           icon={XIcon}
           label={`${speaker.name} on X`}
+          className="size-auto"
         />
       )}
       {speaker.social.linkedin && (
@@ -87,7 +95,7 @@ const Speakers = () => {
       <div className="flex flex-col">
         {/* Section Title */}
         <h2 className="mb-12 text-center font-bold font-bricolage text-2xl text-secondary lg:mb-20 lg:text-6xl">
-          Speakers Confirmados
+          Speakers
         </h2>
 
         {/* Speakers Layout - Two Rows */}
