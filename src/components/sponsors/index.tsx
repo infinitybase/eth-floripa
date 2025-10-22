@@ -10,13 +10,13 @@ const Sponsors = () => {
             Sponsors
           </h2>
           <div className="flex flex-wrap items-center justify-center gap-8 lg:gap-16">
-            <Image
-              src="/sponsors/uniswap.png"
-              alt="Uniswap"
-              width={200}
-              height={60}
-              className="w-full max-w-[200px] lg:w-48 lg:max-w-[200px]"
-            />
+            {/*<Image*/}
+            {/*  src="/sponsors/uniswap.png"*/}
+            {/*  alt="Uniswap"*/}
+            {/*  width={200}*/}
+            {/*  height={60}*/}
+            {/*  className="w-full max-w-[200px] lg:w-48 lg:max-w-[200px]"*/}
+            {/*/>*/}
             <Image
               src="/sponsors/nouns.png"
               alt="Nouns"
