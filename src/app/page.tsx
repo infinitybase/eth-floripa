@@ -1,4 +1,5 @@
 import Agenda from '@/components/agenda';
+import ApplyToSpeak from '@/components/apply-to-speak';
 import Experience from '@/components/experience';
 import Faq from '@/components/faq';
 import FloripaCarousel from '@/components/floripa-carousel';
@@ -19,6 +20,7 @@ export default function Page() {
       <Experience />
       <Agenda />
       <Speakers />
+      <ApplyToSpeak />
       <MagicIsland />
       <FloripaCarousel />
       <Hotel />
